@@ -14,7 +14,7 @@ wss.on('connection', function connection(ws) {
 
     clients.forEach(client => {
       if (client.readyState === WebSocket.OPEN) {
-        client.send(`ESP32 respondeu: ${message}`);
+        client.send(`${message}`);
       }
     });
   });
