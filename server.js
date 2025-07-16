@@ -42,7 +42,7 @@ wss.on('connection', function connection(ws) {
 
     // Cliente autorizado, repassa mensagem como texto
     const textMessage = message.toString(); // 🔧 Força envio como texto
-    console.log('📩 Recebido:', textMessage);
+    console.log('📩 Recebido de ${ws.token}: ${textMessage}');
 
     clients.forEach(client => {
       if (client.readyState === WebSocket.OPEN) {
