@@ -12,11 +12,11 @@ wss.on('connection', function connection(ws) {
   ws.isAuthorized = false;
 
   console.log('🔌 Nova conexão aguardando token');
-
+let token;
   ws.on('message', function incoming(message) {
     // Se não autorizado, aguarda o token
     if (!ws.isAuthorized) {
-      let token;
+      
       try {
         const data = JSON.parse(message.toString());
         token = data.token;
