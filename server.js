@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const TOKENS_VALIDOS = ['JCM-001', 'JCM-ABC', 'JCM-12345', 'JCM-destop', 'ESP324676EFD0'];
+const TOKENS_VALIDOS = ['JCM-001', 'JCM-ABC', 'JCM-12345', 'JCM-destop', 'ESP324676EFD0', 'paineljuliano'];
 
 const wss = new WebSocket.Server({
   port: process.env.PORT || 3000
